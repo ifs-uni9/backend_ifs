@@ -6,5 +6,12 @@
   "contributors": [
     "Bryan <bryan.matheusbmf@gmail.com>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "eslit": "^6.0.0",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
 }
