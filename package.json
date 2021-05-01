@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/ifs-uni9/backend_ifs",
-  "contributors": ["Bryan <bryan.matheusbmf@gmail.com>"],
+  "contributors": [
+    "Bryan <bryan.matheusbmf@gmail.com>"
+  ],
   "license": "MIT"
 }
