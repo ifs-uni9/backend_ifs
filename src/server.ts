@@ -11,4 +11,4 @@ app.get("/api", (_, res) => {
   res.send("API IFS for backend v1.0.0.");
 });
 
-app.listen(process.env.SR_PORT || 3333);
+app.listen(process.env.SERVER_PORT || 3333);
