@@ -12,11 +12,10 @@ const authenticate = (req: Request, res: Response, next: NextFunction) => {
     }).sendStatus(401);
 
   } else {
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err) => {
       if (err) {
-        return res.json({code: 403, message: "Invalid token."}).sendStatus(403)
+        return res.status(403).json({code: 403, message: "Invalid token."});
       } else {
-        req.body.username = user;
         next();
       }
     });
