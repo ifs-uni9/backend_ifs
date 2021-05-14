@@ -14,7 +14,8 @@ const authenticate = (req: Request, res: Response, next: NextFunction) => {
   } else {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err) => {
       if (err) {
-        return res.status(403).json({code: 403, message: "Invalid token."});
+        return res.status(403)
+                  .json({ code: 403, message: "Invalid token." });
       } else {
         next();
       }
