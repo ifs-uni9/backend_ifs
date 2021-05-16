@@ -14,12 +14,4 @@ model User {
   id            Int         @id @default(autoincrement())
   name          String      @unique
   password      String
-  accessLevel   AccessLevel @relation(fields: [accessLevelId], references: [id])
-  accessLevelId Int
-}
-
-model AccessLevel {
-  id          Int    @id @default(autoincrement())
-  description String
-  User        User[]
 }
