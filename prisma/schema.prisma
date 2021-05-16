@@ -11,7 +11,15 @@ generator client {
 }
 
 model User {
-  id            Int         @id @default(autoincrement())
-  name          String      @unique
-  password      String
+  id           Int         @id @default(autoincrement())
+  name         String      @unique
+  password     String
+  accesLevelId Int
+  accessLevel  AccessLevel @relation(fields: [accesLevelId], references: [id])
+}
+
+model AccessLevel {
+  id          Int    @id @default(autoincrement())
+  description String
+  User        User[]
 }
